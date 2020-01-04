@@ -1,0 +1,76 @@
+
+/* -------------------------------------------------------
+                     phone & tablet 
+-------------------------------------------------------- */
+
+@media (max-width: 767px){
+
+	.navbar .navbar-toggle{
+		background: none;
+		margin-top: 15px;
+		border: none;
+	}
+
+	.navbar .navbar-toggle:hover,
+	.navbar .navbar-toggle:focus
+	{
+		background: none;
+	}
+
+	.navbar .navbar-toggle .icon-bar{
+		background: #fff;
+	}
+		
+	.navbar .navbar-nav>li{
+		margin: 2px 2px;
+	}
+
+	.navbar .navbar-collapse{
+		text-align: center;
+		border: none;
+		background: #111;
+		margin-top: 4px;
+		padding-bottom: 0px;
+	}
+
+	.caption h1{
+		font-size: 60px;
+	}
+
+	.header{
+		background-position: 50% 0% !important;
+	}
+
+	.portfolio .filtering span{
+		padding: 0 20px 0 15px;
+		font-size: 14px;
+	}
+
+	.date{
+		display: block!important;
+		float: none;
+		margin: 0!important
+	}
+
+	.contact .info-item{
+		margin-bottom: 50px;
+	}
+
+	.s-post,
+	.comments,
+	.post-comment
+	{
+		padding-right: 0px;
+		border-right: none;
+	}
+}
+
+@media (max-width: 991px){
+
+	.hero .hero-img,
+	.numbers .numb-item,
+	.contact .cont-info
+	{
+		margin-bottom: 50px;
+	}
+}

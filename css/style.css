@@ -941,6 +941,10 @@ input:focus,textarea:focus{
 	color:#111
 }
 
+.counter{
+	font-family: cursive;
+}
+
 .expcarousel, .courses{
 	background:#f4f4f4
 }

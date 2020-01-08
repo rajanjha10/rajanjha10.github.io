@@ -88,6 +88,8 @@ $(window).on("load",function(){
         	$('.edu').removeClass('hide');	
         }
     });
+    var filterValue=$('.filtering .active').attr("data-filter");
+	$(".gallery").isotope({}).isotope({filter:filterValue});
 	$("#contact-form").validator();
 	$("#contact-form").on("submit",function(e){
 		//https://formcarry.com/s/eGBgTeUhNdc

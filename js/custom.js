@@ -21,7 +21,7 @@ $(function(){
 		$(':focus').blur();
 	});
 	$(".caption h4 span").typed({
-		strings:["Computer Engineering Student","Competitive Programmer","Developer"],
+		strings:["Computer Engineer","Competitive Programmer","Software Engineer"],
 		loop:true,
 		startDelay:1e3,
 		backDelay:2e3});
@@ -74,6 +74,7 @@ $(function(){
 
 $(window).on("load",function(){
 	$(".loading").fadeOut(500);
+	$('.edu').addClass('hide');
 	$('.expitem a').click(function(e){
         e.preventDefault();
         $('.expitem a').removeClass('active');

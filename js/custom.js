@@ -21,7 +21,7 @@ $(function(){
 		$(':focus').blur();
 	});
 	$(".caption h4 span").typed({
-		strings:["Computer Engineer","Competitive Programmer","Software Engineer"],
+		strings:["Software Development Engineer","Competitive Programmer","Computer Engineer"],
 		loop:true,
 		startDelay:1e3,
 		backDelay:2e3});
@@ -96,19 +96,29 @@ $(window).on("load",function(){
 		//https://formcarry.com/s/eGBgTeUhNdc
 		//https://formspree.io/xwkvawkg
 		//https://www.enformed.io/98bk4z1e
-		var name = $(this).serializeArray()[0].value;
-		function success(){
-    			var messageText= "Hey " + name + ", Your Message was delievered successfully";
-				var alertBox='<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+messageText+"</div>";
-				$("#contact-form").find(".messages").html(alertBox);
-				$("#contact-form")[0].reset();
-			}
-		function error(){
-				var messageText= "Hey " + name + ", Oops! There was a problem sending your message";
-				var alertBox='<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+messageText+"</div>";
-				$("#contact-form").find(".messages").html(alertBox);
-			}
-		if($(this).serializeArray()[3].value.length >= 100){
+		let name = $(this).serializeArray()[0].value;
+		let email = $(this).serializeArray()[1].value;
+		let message = $(this).serializeArray()[3].value;
+
+		function success() {
+			var messageText= "Hey " + name + ", Your Message was delievered successfully";
+			var alertBox='<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+messageText+"</div>";
+			$("#contact-form").find(".messages").html(alertBox);
+			$("#contact-form")[0].reset();
+		}
+
+		function error() {
+			var messageText= "Hey " + name + ", Oops! There was a problem sending your message";
+			var alertBox='<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+messageText+"</div>";
+			$("#contact-form").find(".messages").html(alertBox);
+		}
+
+		if(name=="" || email=="" || message=="") {
+			window.setTimeout(function() {
+        		error();
+    		}, 0);
+		}
+		else if(message.length >= 100){
 			e.preventDefault();
 			var data = new FormData($(this)[0]);
 			var xhr = new XMLHttpRequest();
